@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "jasmine": "^5.5.0",
+    "type": "module"
+
+  },
+  "scripts": {
+    "test": "jasmine"
+  }
+}
