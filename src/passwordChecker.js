@@ -1,5 +1,18 @@
-function isValidPassword(password) {
-    return password.length >= 8;
+function passwordChecker(password) {
+    const minLength = 8;
+    const specialChars = /[!@#$%^&*(),.?":{}|<>]/;
+    const containsNumber = /\d/;
+    const containsIPL = /IPL/i;
+
+    if (
+        password.length >= minLength &&
+        specialChars.test(password) &&
+        containsNumber.test(password) &&
+        !containsIPL.test(password)
+    ) {
+        return true;
+    }
+    return false;
 }
 
-module.exports = isValidPassword;
+module.exports = passwordChecker;
