@@ -14,7 +14,7 @@ describe('Validation de mot de passe', () => {
         const validResult = isValidPassword(validPassword);
 
         console.log(`Test password: ${validPassword} -Result: ${validResult}`);
-        
+
         expect(validResult).toBe(true, `Expected ${validPassword} to be valid`);
     });
 
@@ -61,5 +61,14 @@ describe('Validation de mot de passe', () => {
         console.log(`Test password: ${password} Result: ${result}`);
 
         expect(result).toBe(false, `Expected ${password} to be invalid`);
+    });
+
+    it('should return true for another valid password', () => {
+        const password = 'AnotherValid1!';
+        const result = isValidPassword(password);
+
+        console.log(`Test password: ${password} Result: ${result}`);
+
+        expect(result).toBe(true, `Expected ${password} to be valid`);
     });
 });
