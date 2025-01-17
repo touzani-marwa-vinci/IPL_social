@@ -19,4 +19,8 @@ describe('Validation de mot de passe', () => {
         expect(isValidPassword('NoNumber!')).toBe(false);
     });
 
+    it('should return false for password containing "IPL"', () => {
+        expect(isValidPassword('IPLSecure123')).toBe(false);
+    });
+
 });
