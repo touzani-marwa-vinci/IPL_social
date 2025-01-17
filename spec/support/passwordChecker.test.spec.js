@@ -14,4 +14,9 @@ describe('Validation de mot de passe', () => {
     it('should return false for password without special character', () => {
         expect(isValidPassword('NoSpecial123')).toBe(false);
     });
+
+    it('should return false for password without a number', () => {
+        expect(isValidPassword('NoNumber!')).toBe(false);
+    });
+
 });
